@@ -1,0 +1,162 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    border-radius: 30px;
+    top: 50px;
+    width: 100%;
+}
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgb(252, 246, 202);
+        padding: 10px;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between; /* Place logo and menu items at opposite ends */
+        align-items: center; /* Vertically center items */
+        border-radius: 10px;
+    }
+    
+    .logo img{
+        color: #0b0b0b;
+        font-size: 18px;
+        width: 10%;
+        height:10px;
+    }
+    
+    /* Remove default anchor text decoration */
+    .menu-items a {
+        text-decoration: none;
+    }
+    
+    /* Style menu items */
+    .menu-items {
+        list-style: none;
+        padding: 0;
+        margin: 30px;
+        display: flex; /* Use flexbox layout */
+        
+    }
+    
+    .menu-items li {
+        margin-left: 20px; /* Add spacing between menu items */
+    }
+    
+    .menu-items li:first-child {
+        margin-left: 0; /* Remove margin from the first menu item */
+    }
+    
+    .menu-items li a {
+        color: #040404;
+        text-decoration: none;
+        font-size: 14px;
+        transition: transform 0.3s ease; 
+        padding: 10px 20px;
+        border-radius: 30px;
+    }
+    
+    /* Apply hover effect on menu items */
+    .menu-items li a:hover {
+        background-color: #ff0000; /* Change background color on hover */
+        color: #fff; /* Change text color on hover */
+        transform: scale(5.5);
+    }
+
+
+
+    .search-bar {
+        position: relative;
+        top: 60px;
+        left: 40%;
+        transform: translateY(70%);
+        z-index: 10;
+        
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    .search-bar input {
+        padding: 10px;
+        width: 300px;
+        border: 1px solid #fcfbfb;
+        border-radius: 30px;
+        background-color: #0e0e0e6a;
+        color: #f7f2f2;
+        font-size: 14px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .search-bar button {
+        padding: 1px;
+        background-color: #c0bebe7b;
+        
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        width: 50px;
+        
+       
+        
+    }
+
+
+/* Main styles */
+main {
+    padding: 20px;
+}
+
+/* Search result styles */
+.search-result {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Image styles */
+.search-result img {
+    width: 200px;
+    border-radius: 5px;
+    height: 200px;
+}
+
+/* Title styles */
+.search-result h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 150px;
+    top: 0;
+    
+}
+
+/* Description styles */
+.search-result p {
+    color: #666;
+    margin-bottom: 10px;
+   
+    
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}

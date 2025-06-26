@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Book</title>
+</head>
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Centers content vertically in the viewport */
+    justify-content: center; /* Centers content horizontally in the viewport */
+    background: #eee; /* Optional: adds a background color to the whole page */
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px; /* Adjusted for a reasonable width */
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aligns children (form-groups) centrally */
+}
+
+.form-group {
+    width: 80%; /* Adjusted to make sure input fields are not too wide or narrow */
+    margin-bottom: 20px; /* Provides space between form groups */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the form-group content */
+}
+
+label {
+    text-align: center; /* Center-align labels */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: 100%; /* Makes full use of the form-group width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.input-group {
+    display: flex;
+    width: 100%; /* Adjusts width to be within form-group */
+    align-items: center;
+}
+
+.currency-symbol {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    color: #333;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    width: auto; /* Adjusts width to content */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+</style>
+</head>
+<body>
+    <h1>Add New Book</h1>
+    <form action="insert_book.php" method="post" enctype="multipart/form-data">
+        
+             <div class="input-group">
+            <label for="name">Book Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div><br>
+        <div class="input-group">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+        </div><br>
+        <div class="input-group">
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required>
+        </div><br>
+        <div class="input-group">
+            <label for="published_year">Published Year:</label>
+            <input type="number" id="published_year" name="published_year"  required>
+        </div><br>
+        <div class="input-group">
+            <label for="price">Price:</label>
+		<span class="currency-symbol">₹</span>
+            <input type="number" id="price" name="price" step="0.01" required>
+        </div><br>
+        <div class="input-group">
+            <label for="image">Book Image:</label>
+            <input type="file" id="image" name="image" accept="image/*">
+        </div>
+        <button type="submit">Add Book</button>
+    </form>
+</body>
+</html>
